@@ -23,4 +23,8 @@ router.get('/about', () => {
   return 'This is the about page.'
 }).use(middleware.auth())
 
-router.resource('posts', PostsController)
+// router.resource('posts', PostsController).only(['index', 'show'])
+router.resource('posts', PostsController).use(
+  ['create', 'destroy', 'store', 'update'],
+  middleware.auth()
+).except(['index', 'show'])
