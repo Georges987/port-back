@@ -11,7 +11,7 @@ export default class extends BaseSchema {
       table.string('content', 255).notNullable()
       table.string('image', 255).notNullable()
       table.string('assets', 255).nullable()
-      table.string('assets_type', 255).notNullable()
+      table.string('assetsType', 255).notNullable()
       table.string('author', 255).notNullable()
       table.string('category', 255).notNullable()
       table.timestamp('created_at')
