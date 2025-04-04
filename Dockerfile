@@ -7,6 +7,9 @@ ADD package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN node ace build
-EXPOSE 3333
+ENV NODE_ENV=production
+ENV HOST=127.0.0.1
+ENV PORT=10000
+EXPOSE 10000
 # CMD ["node", "--import=ts-node-maintained/register/esm", "./bin/server.ts"]
 CMD ["npm", "run", "dev"]
