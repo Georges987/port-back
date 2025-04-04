@@ -7,9 +7,6 @@ ADD package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN node ace build
-RUN node ace migration:reset
-RUN node ace migration:run
-RUN node ace db:seed
 ENV NODE_ENV=production
 ENV HOST=127.0.0.1
 ENV PORT=10000
