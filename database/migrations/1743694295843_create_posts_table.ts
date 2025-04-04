@@ -10,6 +10,7 @@ export default class extends BaseSchema {
       table.string('tag', 255).notNullable()
       table.string('content', 255).notNullable()
       table.string('image', 255).notNullable()
+      table.string('github', 255).nullable()
       table.string('assets', 255).nullable()
       table.string('assets_type', 255).notNullable()
       table.string('author', 255).notNullable()

@@ -13,8 +13,6 @@ export default class PostsController {
    * Handle form submission for the create action
    */
   async store({ request }: HttpContext) {
-    console.log(request.all());
-    
     return await Post.create({
       title: request.input('title'),
       tag: request.input('tag'),
@@ -22,8 +20,9 @@ export default class PostsController {
       image: request.input('image'),
       assets: request.input('assets'),
       assets_type: request.input('assetsType'),
+      github: request.input('github'),
       category: request.input('category'),
-      author: request.input('author') ?? "Georges AYENI",
+      author: request.input('author'),
     })
   }
 

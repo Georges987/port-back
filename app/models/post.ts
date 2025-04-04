@@ -27,6 +27,9 @@ export default class Post extends BaseModel {
   declare author: string
 
   @column()
+  declare github: string
+
+  @column()
   declare category: string
 
   @column.dateTime({ autoCreate: true })
