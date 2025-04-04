@@ -21,7 +21,7 @@ export default class Post extends BaseModel {
   declare assets: string | null
 
   @column()
-  declare assetsType: string
+  declare assets_type: string
 
   @column()
   declare author: string
