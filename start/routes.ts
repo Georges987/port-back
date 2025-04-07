@@ -33,4 +33,4 @@ router.resource('posts', PostsController).use(
 // routes for download file /tmp/db.sqlite3 in the root directory
 router.get('/db', async ({ response }) => {
   response.download("./tmp/db.sqlite3");
-})
+}).use(middleware.auth())
