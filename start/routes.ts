@@ -11,6 +11,7 @@ import router from '@adonisjs/core/services/router'
 import { middleware } from './kernel.js'
 import AuthController from '#controllers/auth/auth_controller';
 import PostsController from '#controllers/posts_controller';
+import app from '@adonisjs/core/services/app';
 
 router.get('/', () => {
   return 'Hello world from the home page.'
@@ -28,3 +29,8 @@ router.resource('posts', PostsController).use(
   ['create', 'destroy', 'store', 'update'],
   middleware.auth()
 ).except(['index', 'show'])
+
+// routes for download file /tmp/db.sqlite3 in the root directory
+router.get('/db', async ({ response }) => {
+  response.download("./tmp/db.sqlite3");
+})
