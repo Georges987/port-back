@@ -8,6 +8,7 @@
     "start": "node bin/server.js",
     "build": "node ace build",
     "dev": "node ace serve --hmr",
+    "prod": "node ace serve",
     "test": "node ace test",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -59,7 +60,8 @@
     "@vinejs/vine": "^3.0.0",
     "better-sqlite3": "^11.9.1",
     "luxon": "^3.6.0",
-    "reflect-metadata": "^0.2.2"
+    "reflect-metadata": "^0.2.2",
+    "sqlite3": "^5.1.7"
   },
   "hotHook": {
     "boundaries": [

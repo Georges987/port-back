@@ -38,11 +38,15 @@ __decorate([
 __decorate([
     column(),
     __metadata("design:type", String)
-], Post.prototype, "assetsType", void 0);
+], Post.prototype, "assets_type", void 0);
 __decorate([
     column(),
     __metadata("design:type", String)
 ], Post.prototype, "author", void 0);
+__decorate([
+    column(),
+    __metadata("design:type", String)
+], Post.prototype, "github", void 0);
 __decorate([
     column(),
     __metadata("design:type", String)
